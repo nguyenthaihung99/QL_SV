@@ -45,8 +45,87 @@ export default function Info_GV({ navigation }) {
     const InfoGeneral = () => {
         return (
             <View style={styles.viewinfogerenal}>
-                <Text style={styles.textinfogeranal}>Thông tin chung</Text>
-                <Text style={styles.textkhoa}>Khoa : {infogv.khoa}</Text>
+                <View>
+                    <Text style={styles.textinfogeranal}>Thông tin chung</Text>
+                    <View style={{ flexDirection: 'column' }}>
+                        <Text style={styles.texttitlekhoa}>Khoa </Text>
+                        <Text style={styles.textkhoa}>{infogv?.khoa}</Text>
+                    </View>
+                    <View style={styles.viewlinehalf} />
+                    <View>
+                        <Text style={styles.texttitlechuyennganh}>
+                            Chuyên Ngành
+                        </Text>
+                        <Text style={styles.textchuyennganh}>
+                            {infogv?.chuyen_nganh}
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            width: 363,
+                            height: 0.5,
+                            backgroundColor: 'red',
+                            marginTop: 80,
+                            marginLeft: 16
+                        }}
+                    />
+                    <View>
+                        <Text style={styles.texttitletrinhdo}>Trình Độ </Text>
+                        <Text style={styles.texttrinhdo}>
+                            {infogv?.chuc_vu}
+                        </Text>
+                    </View>
+                </View>
+                <View style={styles.viewline} />
+                <View>
+                    <Text style={styles.infopersonal}>Thông tin cá nhân</Text>
+                    <View
+                        style={{
+                            flexDirection: 'column'
+                        }}>
+                        <Text style={styles.texttitlekhoa}>Giới Tính </Text>
+                        <Text style={styles.textkhoa}>{infogv?.gioi_tinh}</Text>
+                    </View>
+                    <View style={styles.viewlinehalf} />
+                    <View>
+                        <Text style={styles.texttitlechuyennganh}>
+                            Ngày Sinh
+                        </Text>
+                        <Text style={styles.textchuyennganh}>
+                            {infogv?.ngay_sinh}
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            width: 363,
+                            height: 0.5,
+                            backgroundColor: 'red',
+                            marginTop: 80,
+                            marginLeft: 16
+                        }}
+                    />
+                    <View>
+                        <Text style={styles.texttitletrinhdo}>
+                            Số Điện Thoại
+                        </Text>
+                        <Text style={styles.texttrinhdo}>
+                            {infogv?.so_dien_thoai}
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            width: 363,
+                            height: 0.5,
+                            backgroundColor: 'red',
+                            marginTop: 80,
+                            marginLeft: 16
+                        }}
+                    />
+                    <View>
+                        <Text style={styles.texttitleemail}>Email</Text>
+                        <Text style={styles.texttrinhdo}>{infogv?.email}</Text>
+                    </View>
+                </View>
             </View>
         );
     };
@@ -54,7 +133,7 @@ export default function Info_GV({ navigation }) {
         <View style={{ flex: 1 }}>
             <ScrollView style={{ flex: 1 }}>
                 <ImageBackground
-                    style={{ width: '100%', height: 1000 }}
+                    style={{ width: '100%', height: 1200 }}
                     source={require('./icon/ic_qlsv_bginfo.png')}
                 />
                 <TitleAvtName />

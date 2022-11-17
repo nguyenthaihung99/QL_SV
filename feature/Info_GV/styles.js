@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     texttitle: {
         width: '100%',
-        marginTop: 30,
+        marginTop: 20,
         fontSize: 30,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
@@ -68,8 +68,8 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         marginTop: 350,
         width: '100%',
-        height: 1000,
-        flex: 1
+        height: 2000
+        // flex: 1
     },
     textinfogeranal: {
         width: '100%',
@@ -82,9 +82,94 @@ export const styles = StyleSheet.create({
         color: 'black',
         textDecorationLine: 'underline'
     },
+    texttitlekhoa: {
+        width: '100%',
+        marginTop: 75,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '900',
+        position: 'absolute',
+        color: 'black'
+    },
     textkhoa: {
         width: '100%',
-        marginTop: 70,
+        marginTop: 105,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '500',
+        position: 'absolute',
+        color: 'blue'
+    },
+    texttitlechuyennganh: {
+        width: '100%',
+        marginTop: 15,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '900',
+        position: 'absolute',
+        color: 'black'
+    },
+    textchuyennganh: {
+        width: '100%',
+        marginTop: 45,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '500',
+        position: 'absolute',
+        color: 'blue'
+    },
+    texttitletrinhdo: {
+        width: '100%',
+        marginTop: 15,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '900',
+        position: 'absolute',
+        color: 'black'
+    },
+    texttrinhdo: {
+        width: '100%',
+        marginTop: 45,
+        marginLeft: 16,
+        fontSize: 18,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '500',
+        position: 'absolute',
+        color: 'blue'
+    },
+    viewlinehalf: {
+        width: 363,
+        height: 0.5,
+        backgroundColor: 'red',
+        marginTop: 140,
+        marginLeft: 16
+    },
+    viewline: {
+        width: 373,
+        height: 2,
+        backgroundColor: 'black',
+        marginTop: 120,
+        marginLeft: 8
+    },
+    infopersonal: {
+        width: '100%',
+        marginTop: 16,
+        marginLeft: 16,
+        fontSize: 25,
+        fontFamily: 'FS PF BeauSans Pro',
+        fontWeight: '900',
+        position: 'absolute',
+        color: 'black',
+        textDecorationLine: 'underline'
+    },
+    texttitleemail: {
+        width: '100%',
+        marginTop: 15,
         marginLeft: 16,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
