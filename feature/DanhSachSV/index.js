@@ -259,8 +259,6 @@ export const DanhSachSinhVien = (props) => {
             </View>
         );
     };
-    console.log('infosv', datastudent);
-    // console.log(dssinhvien);
     //------------
     const AddStudent = () => {
         return (

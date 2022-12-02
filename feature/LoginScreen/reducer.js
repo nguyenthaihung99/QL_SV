@@ -7,7 +7,6 @@ const initialState = {
 };
 export const ReducerLogin = (state = initialState, action) => {
     const { type, user } = action;
-    console.log(state);
     switch (type) {
         case LOGIN:
             const loginedUser = state.user.find(

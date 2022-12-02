@@ -2,7 +2,7 @@ export const dataThu = [
     {
         id: '0',
         title: 'TH 2',
-        date: '07/11/2022',
+        date: '28/11/2022',
         cahoc: [
             {
                 id: '1',
@@ -41,7 +41,7 @@ export const dataThu = [
     {
         id: '1',
         title: 'TH 3',
-        date: '08/11/2022',
+        date: '29/11/2022',
         cahoc: [
             {
                 id: '1',
@@ -80,7 +80,7 @@ export const dataThu = [
     {
         id: '2',
         title: 'TH 4',
-        date: '09/11/2022',
+        date: '30/11/2022',
         cahoc: [
             {
                 id: '1',
@@ -119,7 +119,7 @@ export const dataThu = [
     {
         id: '3',
         title: 'TH 5',
-        date: '10/11/2022',
+        date: '01/12/2022',
         cahoc: [
             {
                 id: '1',
@@ -166,7 +166,7 @@ export const dataThu = [
     {
         id: '4',
         title: 'TH 6',
-        date: '12/11/2022',
+        date: '02/12/2022',
         cahoc: [
             {
                 id: '1',
@@ -205,7 +205,7 @@ export const dataThu = [
     {
         id: '5',
         title: 'TH 7',
-        date: '13/11/2022',
+        date: '03/12/2022',
         cahoc: [
             {
                 id: '1',

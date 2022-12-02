@@ -18,35 +18,41 @@ export const LoginScreen = () => {
     const navigation = useNavigation();
     const [showmodalforgot, setShowmodalforgot] = useState(false);
     const state = useSelector((state) => state.ReducerLogin);
-    console.log(state);
     const dispatsh = useDispatch();
 
-    const [username, onChangeusername] = useState('');
-    const [password, onChangepassword] = useState('');
+    const [username, setOnChangeusername] = useState('');
+    const [password, setOnChangepassword] = useState('');
     const [isValidEmail, setValidEmail] = useState(true);
     const [isValidPassWord, setValidPassWord] = useState(true);
     const [erro, setErro] = useState([]);
 
-    const verifyEmail = (username) => {
-        let regex = new RegExp(
-            /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/
-        );
+    const onBlurUserName = () => {
+        const verifyEmail = (username) => {
+            let regex = new RegExp(
+                /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/
+            );
 
-        if (regex.test(username)) {
-            return true;
-        }
-        return false;
+            if (regex.test(username)) {
+                return true;
+            }
+            return false;
+        };
+        const isValidMail = verifyEmail(username);
+        isValidMail ? setValidEmail(true) : setValidEmail(false);
     };
-    const verifyPassword = (password) => {
-        let regex = new RegExp(
-            /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
-        );
-        if (regex.test(password)) {
-            return true;
-        }
-        return false;
+    const onBlurPassWord = () => {
+        const verifyPassword = (password) => {
+            let regex = new RegExp(
+                /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+            );
+            if (regex.test(password)) {
+                return true;
+            }
+            return false;
+        };
+        const isValidPassWord = verifyPassword(password);
+        isValidPassWord ? setValidPassWord(true) : setValidPassWord(false);
     };
-
     const LogoName = () => {
         return (
             <View>
@@ -68,7 +74,17 @@ export const LoginScreen = () => {
     const login = async (username, password) =>
         dispatsh(login(username, password));
     const onPressSubmit = () => {
-        const {username, password } = state
+        if (!username && !password) {
+            Alert.alert('', 'Vui lòng nhập tài khoản và mật khẩu !!!');
+            return;
+        }
+        if (isValidEmail === false || isValidPassWord === false) {
+            Alert.alert(
+                'Tài khoản không hợp lệ',
+                'Vui lòng nhập đầy đủ tài khoản và mật khẩu theo đúng yêu cầu !!!'
+            );
+            return;
+        }
         try {
             navigation.push('DanhMucScreen');
         } catch (error) {}
@@ -103,14 +119,10 @@ export const LoginScreen = () => {
                         placeholder="User Name"
                         keyboardType="default"
                         maxLength={60}
-                        onChangeText={(username) => {
-                            onChangeusername(username);
-                            const isValid = verifyEmail(username);
-                            isValid
-                                ? setValidEmail(true)
-                                : setValidEmail(false);
-                        }}
-                        value={username}
+                        onChangeText={(username) =>
+                            setOnChangeusername(username)
+                        }
+                        onBlur={() => onBlurUserName()}
                     />
                 </View>
                 <Text
@@ -134,13 +146,9 @@ export const LoginScreen = () => {
                         maxLength={16}
                         secureTextEntry={true}
                         onChangeText={(pass_word) => {
-                            onChangepassword(pass_word);
-                            const isValid = verifyPassword(pass_word);
-                            isValid
-                                ? setValidPassWord(true)
-                                : setValidPassWord(false);
+                            setOnChangepassword(pass_word);
                         }}
-                        value={password}
+                        onBlur={() => onBlurPassWord()}
                     />
                     <Text
                         style={{
@@ -154,7 +162,7 @@ export const LoginScreen = () => {
                         }}>
                         {isValidPassWord
                             ? ''
-                            : 'Lỗi cú pháp! Mật khẩu phải chứa ít nhất 8 kí tự, ít nhất 1 số, một chữ thường, một chữ hoa và một kí tự đặc biệt'}
+                            : 'Lỗi cú pháp! Mật khẩu phải chứa ít nhất 8 kí tự, chứa ít nhất 1 số, một chữ thường, một chữ hoa và một kí tự đặc biệt'}
                     </Text>
                 </View>
             </View>

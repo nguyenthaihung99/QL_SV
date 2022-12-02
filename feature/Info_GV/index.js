@@ -5,7 +5,8 @@ import {
     ImageBackground,
     ScrollView,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Linking
 } from 'react-native';
 import { useSelector } from 'react-redux';
 
@@ -19,6 +20,8 @@ export default function Info_GV({ navigation }) {
             setInfogv(element);
         });
     }, []);
+    const urlEmail =
+        'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmzhGJDXdjRDXLSvMbHdpjhFQGzBvNgqWSTVfsKzNnQpKPMqgMRzfgrdtsGmbZMzhMsxvX';
     const TitleAvtName = () => {
         return (
             <View style={styles.viewavt}>
@@ -64,9 +67,8 @@ export default function Info_GV({ navigation }) {
                         style={{
                             width: 363,
                             height: 0.5,
-                            backgroundColor: 'red',
-                            marginTop: 80,
-                            marginLeft: 16
+                            backgroundColor: '#FFFFFF',
+                            marginTop: 80
                         }}
                     />
                     <View>
@@ -97,33 +99,45 @@ export default function Info_GV({ navigation }) {
                     </View>
                     <View
                         style={{
-                            width: 363,
+                            width: 358,
                             height: 0.5,
-                            backgroundColor: 'red',
-                            marginTop: 80,
-                            marginLeft: 16
+                            backgroundColor: '#FFFFFF',
+                            marginTop: 80
                         }}
                     />
                     <View>
                         <Text style={styles.texttitletrinhdo}>
                             Số Điện Thoại
                         </Text>
-                        <Text style={styles.texttrinhdo}>
-                            {infogv?.so_dien_thoai}
-                        </Text>
+                        <TouchableOpacity
+                            onPress={() =>
+                                Linking.openURL(`tel:${infogv?.so_dien_thoai}`)
+                            }
+                            style={{
+                                width: 120
+                            }}>
+                            <Text style={styles.texttrinhdo}>
+                                {infogv?.so_dien_thoai}
+                            </Text>
+                        </TouchableOpacity>
                     </View>
                     <View
                         style={{
-                            width: 363,
+                            width: 358,
                             height: 0.5,
-                            backgroundColor: 'red',
-                            marginTop: 80,
-                            marginLeft: 16
+                            backgroundColor: '#FFFFFF',
+                            marginTop: 80
                         }}
                     />
                     <View>
                         <Text style={styles.texttitleemail}>Email</Text>
-                        <Text style={styles.texttrinhdo}>{infogv?.email}</Text>
+                        <TouchableOpacity
+                            onPress={() => Linking.openURL(urlEmail)}
+                            style={{ width: 300 }}>
+                            <Text style={styles.texttrinhdo}>
+                                {infogv?.email}
+                            </Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -133,8 +147,8 @@ export default function Info_GV({ navigation }) {
         <View style={{ flex: 1 }}>
             <ScrollView style={{ flex: 1 }}>
                 <ImageBackground
-                    style={{ width: '100%', height: 1200 }}
-                    source={require('./icon/ic_qlsv_bginfo.png')}
+                    style={{ width: '100%', height: 1050 }}
+                    source={require('./icon/ic_qlsv_bginfogv.png')}
                 />
                 <TitleAvtName />
                 <InfoGeneral />

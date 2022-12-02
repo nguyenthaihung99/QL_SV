@@ -24,10 +24,11 @@ export const styles = StyleSheet.create({
         marginTop: 6
     },
     viewavt: {
-        position: 'absolute',
-        backgroundColor: 'skyblue',
         width: '100%',
         height: 300,
+        borderBottomWidth: 2,
+        borderColor: '#000033',
+        position: 'absolute',
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16
     },
@@ -56,7 +57,7 @@ export const styles = StyleSheet.create({
     },
     textmagv: {
         width: '100%',
-        marginTop: 250,
+        marginTop: 235,
         fontSize: 25,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
@@ -65,11 +66,11 @@ export const styles = StyleSheet.create({
         textAlign: 'center'
     },
     viewinfogerenal: {
+        width: 363,
+        height: 750,
+        marginTop: 299,
         position: 'absolute',
-        marginTop: 350,
-        width: '100%',
-        height: 2000
-        // flex: 1
+        marginLeft: 16
     },
     textinfogeranal: {
         width: '100%',
@@ -79,7 +80,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: 'black',
+        color: '#FFFFFF',
         textDecorationLine: 'underline'
     },
     texttitlekhoa: {
@@ -90,7 +91,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: 'black'
+        color: '#FFFFFF'
     },
     textkhoa: {
         width: '100%',
@@ -100,81 +101,79 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: 'blue'
+        color: '#FFFFFF'
     },
     texttitlechuyennganh: {
         width: '100%',
-        marginTop: 15,
         marginLeft: 16,
+        marginTop: 15,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: 'black'
+        color: '#FFFFFF'
     },
     textchuyennganh: {
         width: '100%',
-        marginTop: 45,
         marginLeft: 16,
+        marginTop: 45,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: 'blue'
+        color: '#FFFFFF'
     },
     texttitletrinhdo: {
         width: '100%',
-        marginTop: 15,
         marginLeft: 16,
+        marginTop: 15,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: 'black'
+        color: '#FFFFFF'
     },
     texttrinhdo: {
         width: '100%',
-        marginTop: 45,
         marginLeft: 16,
+        marginTop: 45,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: 'blue'
+        color: '#FFFFFF'
     },
     viewlinehalf: {
-        width: 363,
+        width: 358,
         height: 0.5,
-        backgroundColor: 'red',
-        marginTop: 140,
-        marginLeft: 16
+        backgroundColor: '#FFFFFF',
+        marginTop: 140
     },
     viewline: {
-        width: 373,
+        width: '100%',
         height: 2,
-        backgroundColor: 'black',
-        marginTop: 120,
-        marginLeft: 8
+        backgroundColor: '#FFFFFF',
+        marginTop: 120
     },
     infopersonal: {
+        marginLeft: 16,
         width: '100%',
         marginTop: 16,
-        marginLeft: 16,
         fontSize: 25,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: 'black',
+        color: '#FFFFFF',
         textDecorationLine: 'underline'
     },
     texttitleemail: {
         width: '100%',
         marginTop: 15,
-        marginLeft: 16,
         fontSize: 18,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
+        marginLeft: 16,
         position: 'absolute',
-        color: 'black'
+        color: '#FFFFFF'
     }
 });
