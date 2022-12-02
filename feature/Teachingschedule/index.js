@@ -190,8 +190,8 @@ export const Teachingschedule = () => {
         return (
             <View style={{ marginTop: 20 }}>
                 <Text style={styles.textbottom}>
-                    Mọi thắc mắc liên hệ facebook ngành công nghệ thông tin
-                    trường Đại Học Mỏ Địa Chất:
+                    Mọi thắc mắc liên hệ facebook chuyên ngành công nghệ phần
+                    mềm trường Đại Học Mỏ Địa Chất
                 </Text>
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity

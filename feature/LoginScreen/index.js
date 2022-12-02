@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import {
     View,
     Text,
@@ -6,7 +6,8 @@ import {
     Image,
     TextInput,
     TouchableOpacity,
-    Alert
+    Alert,
+    ScrollView
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
@@ -109,7 +110,7 @@ export const LoginScreen = () => {
     };
 
     return (
-        <View>
+        <ScrollView showsVerticalScrollIndicator={false}>
             <LogoName />
             <View style={{ position: 'absolute', marginLeft: 16 }}>
                 <Text style={styles.textnameuser}>UserName</Text>
@@ -172,6 +173,6 @@ export const LoginScreen = () => {
                 showmodalforgot={showmodalforgot}
                 setShowmodalforgot={setShowmodalforgot}
             />
-        </View>
+        </ScrollView>
     );
 };
