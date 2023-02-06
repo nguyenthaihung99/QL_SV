@@ -26,14 +26,14 @@ export default function Info_GV({ navigation }) {
         return (
             <View style={styles.viewavt}>
                 <TouchableOpacity
-                    style={styles.touchback}
+                    style={[styles.touchback]}
                     onPress={() => navigation.goBack()}>
                     <Image
                         style={styles.imageback}
                         source={require('../YourProfile/icon/ic_qlsv_back.png')}
                     />
                 </TouchableOpacity>
-                <Text style={styles.texttitle}>Thông tin cá nhân</Text>
+                <Text style={[styles.texttitle]}>Thông tin cá nhân</Text>
                 <TouchableOpacity style={styles.touchavt}>
                     <Image
                         style={styles.imageavt}

@@ -11,11 +11,19 @@ export const TitleComponent = (props) => {
         <View style={{ flexDirection: 'column' }}>
             <View style={styles.viewtitel}>
                 <View style={{ flexDirection: 'row' }}>
-                    <TouchableOpacity onPress={() => Linking.openURL(UrlHUMG)}>
-                        <Image
-                            style={styles.imagelogo}
-                            source={require('../MainScreen/icon/ic_qlsv_logomains.png')}
-                        />
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <View style={{ flexDirection: 'column' }}>
+                            <Image
+                                style={{
+                                    height: 50,
+                                    width: 50,
+                                    marginTop: 45,
+                                    bottom: 20,
+                                    marginLeft: 16
+                                }}
+                                source={require('../YourProfile/icon/ic_qlsv_back.png')}
+                            />
+                        </View>
                     </TouchableOpacity>
                     <View>
                         <View style={{ flexDirection: 'row' }}>
@@ -29,19 +37,14 @@ export const TitleComponent = (props) => {
                             Student Management
                         </Text>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.goBack()}>
-                        <View style={{ flexDirection: 'column' }}>
-                            <Image
-                                style={{
-                                    height: 40,
-                                    width: 40,
-                                    marginTop: 50,
-                                    bottom: 20,
-                                    marginLeft: 70
-                                }}
-                                source={require('../YourProfile/icon/ic_qlsv_back.png')}
-                            />
-                        </View>
+                    <TouchableOpacity onPress={() => Linking.openURL(UrlHUMG)}>
+                        <Image
+                            style={[
+                                styles.imagelogo,
+                                { marginLeft: 70, marginTop: 5 }
+                            ]}
+                            source={require('../MainScreen/icon/ic_qlsv_logomains.png')}
+                        />
                     </TouchableOpacity>
                 </View>
             </View>

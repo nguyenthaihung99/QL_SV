@@ -1,14 +1,16 @@
 import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     texttitle: {
-        width: '100%',
+        width: '70%',
         marginTop: 20,
         fontSize: 30,
+        marginLeft: 65,
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
         color: '#FFFFFF',
-        textAlign: 'center'
+        textAlign: 'center',
+        justifyContent: 'center'
     },
     touchback: {
         width: 50,
@@ -25,6 +27,7 @@ export const styles = StyleSheet.create({
     },
     viewavt: {
         width: '100%',
+        flex: 1,
         height: 300,
         borderBottomWidth: 2,
         borderColor: '#000033',

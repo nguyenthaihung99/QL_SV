@@ -209,7 +209,10 @@ export const DanhSachSinhVien = (props) => {
             'ascii'
         )
             .then((res) => {
-                alert('Export Data ...');
+                Alert.alert(
+                    'Thông báo',
+                    'Đã Lưu file ExCel vào thư mục Download...'
+                );
             })
             .catch((e) => {
                 console.log('Error writeFile', e);
@@ -252,7 +255,7 @@ export const DanhSachSinhVien = (props) => {
                         <TouchableOpacity
                             style={styles.touchexel}
                             onPress={() => handleClick()}>
-                            <Text style={styles.textexel}>Export Exel</Text>
+                            <Text style={styles.textexel}>Export ExCel</Text>
                         </TouchableOpacity>
                     </View>
                 )}
