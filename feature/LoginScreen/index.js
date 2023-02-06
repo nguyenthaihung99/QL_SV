@@ -31,7 +31,7 @@ export const LoginScreen = () => {
         const verifyEmail = (username) => {
             let regex = new RegExp(
                 /([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\"\(\[\]!#-[^-~ \t]|(\\[\t -~]))+@([!#-'*+/-9=?A-Z^-~-]+(\.[!#-'*+/-9=?A-Z^-~-]+)*|\[[\t -Z^-~]*])/
-            ); 
+            );
             if (regex.test(username)) {
                 return true;
             }
@@ -74,7 +74,7 @@ export const LoginScreen = () => {
     const login = async (username, password) =>
         dispatsh(login(username, password));
     const onPressSubmit = () => {
-        if (!username && !password) {
+        if (!username || !password) {
             Alert.alert('', 'Vui lòng nhập tài khoản và mật khẩu !!!');
             return;
         }
@@ -135,7 +135,7 @@ export const LoginScreen = () => {
                         fontStyle: 'italic',
                         textDecorationLine: 'underline'
                     }}>
-                    {isValidEmail ? '' : 'Email Không hợp lệ !'} 
+                    {isValidEmail ? '' : 'Email Không hợp lệ !'}
                 </Text>
                 <Text style={styles.textpassword}>PassWord</Text>
                 <View style={styles.viewinput}>

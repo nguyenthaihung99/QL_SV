@@ -24,7 +24,7 @@ export default function Info_GV({ navigation }) {
         'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmzhGJDXdjRDXLSvMbHdpjhFQGzBvNgqWSTVfsKzNnQpKPMqgMRzfgrdtsGmbZMzhMsxvX';
     const TitleAvtName = () => {
         return (
-            <View style={styles.viewavt}>
+            <View style={[styles.viewavt, { backgroundColor: '#00DD00' }]}>
                 <TouchableOpacity
                     style={[styles.touchback]}
                     onPress={() => navigation.goBack()}>
@@ -67,7 +67,7 @@ export default function Info_GV({ navigation }) {
                         style={{
                             width: 363,
                             height: 0.5,
-                            backgroundColor: '#FFFFFF',
+                            backgroundColor: 'black',
                             marginTop: 80
                         }}
                     />
@@ -101,7 +101,7 @@ export default function Info_GV({ navigation }) {
                         style={{
                             width: 358,
                             height: 0.5,
-                            backgroundColor: '#FFFFFF',
+                            backgroundColor: 'black',
                             marginTop: 80
                         }}
                     />
@@ -125,7 +125,7 @@ export default function Info_GV({ navigation }) {
                         style={{
                             width: 358,
                             height: 0.5,
-                            backgroundColor: '#FFFFFF',
+                            backgroundColor: 'black',
                             marginTop: 80
                         }}
                     />
@@ -148,7 +148,7 @@ export default function Info_GV({ navigation }) {
             <ScrollView style={{ flex: 1 }}>
                 <ImageBackground
                     style={{ width: '100%', height: 1050 }}
-                    source={require('./icon/ic_qlsv_bginfogv.png')}
+                    // source={require('./icon/ic_qlsv_bginfogv.png')}
                 />
                 <TitleAvtName />
                 <InfoGeneral />

@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF',
+        color: 'black',
         textAlign: 'center',
         justifyContent: 'center'
     },
@@ -29,8 +29,6 @@ export const styles = StyleSheet.create({
         width: '100%',
         flex: 1,
         height: 300,
-        borderBottomWidth: 2,
-        borderColor: '#000033',
         position: 'absolute',
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16
@@ -55,7 +53,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF',
+        color: 'black',
         textAlign: 'center'
     },
     textmagv: {
@@ -65,7 +63,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF',
+        color: 'black',
         textAlign: 'center'
     },
     viewinfogerenal: {
@@ -83,7 +81,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF',
+        color: 'black',
         textDecorationLine: 'underline'
     },
     texttitlekhoa: {
@@ -94,7 +92,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     textkhoa: {
         width: '100%',
@@ -104,7 +102,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     texttitlechuyennganh: {
         width: '100%',
@@ -114,7 +112,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     textchuyennganh: {
         width: '100%',
@@ -124,7 +122,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     texttitletrinhdo: {
         width: '100%',
@@ -134,7 +132,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     texttrinhdo: {
         width: '100%',
@@ -144,18 +142,18 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '500',
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     },
     viewlinehalf: {
         width: 358,
         height: 0.5,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'black',
         marginTop: 140
     },
     viewline: {
         width: '100%',
         height: 2,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'black',
         marginTop: 120
     },
     infopersonal: {
@@ -166,7 +164,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         fontWeight: '900',
         position: 'absolute',
-        color: '#FFFFFF',
+        color: 'black',
         textDecorationLine: 'underline'
     },
     texttitleemail: {
@@ -177,6 +175,6 @@ export const styles = StyleSheet.create({
         fontWeight: '900',
         marginLeft: 16,
         position: 'absolute',
-        color: '#FFFFFF'
+        color: 'black'
     }
 });
