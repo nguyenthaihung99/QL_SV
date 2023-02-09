@@ -10,7 +10,8 @@ export const dataThu = [
                 ten_mh: 'Kiểm thử và đảm bảo chất lượng phần mềm',
                 tiet_bd: '1',
                 so_tiet: '2',
-                phong_hoc: 'HNBG402'
+                phong_hoc: 'HNBG402',
+                so_tin_chi: '3'
             },
             {
                 id: '2',
@@ -18,7 +19,8 @@ export const dataThu = [
                 ten_mh: 'Phát triển ứng dụng cho thiết bị di động',
                 tiet_bd: '3',
                 so_tiet: '3',
-                phong_hoc: 'HNBG402'
+                phong_hoc: 'HNBG402',
+                so_tin_chi: '3'
             },
             {
                 id: '3',
@@ -26,7 +28,8 @@ export const dataThu = [
                 ten_mh: 'Cơ sở lập trình',
                 tiet_bd: '6',
                 so_tiet: '2',
-                phong_hoc: 'HNAD202'
+                phong_hoc: 'HNAD202',
+                so_tin_chi: '3'
             },
             {
                 id: '4',
@@ -34,7 +37,8 @@ export const dataThu = [
                 ten_mh: 'Lập trình Java',
                 tiet_bd: '8',
                 so_tiet: '2',
-                phong_hoc: 'HNAD202'
+                phong_hoc: 'HNAD202',
+                so_tin_chi: '3'
             }
         ]
     },
@@ -127,7 +131,8 @@ export const dataThu = [
                 ten_mh: 'Kiểm thử và đảm bảo chất lượng phần mềm',
                 tiet_bd: '1',
                 so_tiet: '2',
-                phong_hoc: 'HNBG402'
+                phong_hoc: 'HNBG402',
+                so_tin_chi: '3'
             },
             {
                 id: '2',
@@ -135,7 +140,8 @@ export const dataThu = [
                 ten_mh: 'Phát triển ứng dụng cho thiết bị di động',
                 tiet_bd: '3',
                 so_tiet: '3',
-                phong_hoc: 'HNBG402'
+                phong_hoc: 'HNBG402',
+                so_tin_chi: '3'
             },
             {
                 id: '3',
@@ -143,7 +149,8 @@ export const dataThu = [
                 ten_mh: 'Cơ sở lập trình',
                 tiet_bd: '6',
                 so_tiet: '2',
-                phong_hoc: 'HNAD202'
+                phong_hoc: 'HNAD202',
+                so_tin_chi: '3'
             },
             {
                 id: '4',
@@ -151,7 +158,8 @@ export const dataThu = [
                 ten_mh: 'Lập trình Java',
                 tiet_bd: '8',
                 so_tiet: '2',
-                phong_hoc: 'HNAD202'
+                phong_hoc: 'HNAD202',
+                so_tin_chi: '3'
             },
             {
                 id: '5',
@@ -159,7 +167,8 @@ export const dataThu = [
                 ten_mh: 'Môi trường và con người',
                 tiet_bd: '10',
                 so_tiet: '2',
-                phong_hoc: 'HNAD202'
+                phong_hoc: 'HNAD202',
+                so_tin_chi: '2'
             }
         ]
     },

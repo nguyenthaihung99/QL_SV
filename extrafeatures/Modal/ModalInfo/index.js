@@ -25,24 +25,40 @@ export const ModalInfoSV = (props) => {
                         <Icon name={'user'} size={40} color={'#EE0033'} />
                     </Text>
                     <Text
-                        style={{
-                            textAlign: 'center',
-                            fontSize: 20,
-                            fontWeight: '900',
-                            lineHeight: 24,
-                            marginTop: 20,
-                            fontFamily: 'Open Sans'
-                        }}>
+                        style={[
+                            styles.textinfo,
+                            {
+                                textAlign: 'center',
+                                fontSize: 24,
+                                color: '#EE0033'
+                            }
+                        ]}>
                         Thông tin Sinh Viên
                     </Text>
-                    <View style={{ marginLeft: 16 }}>
-                        <Text>Số thứ tự: {dataRow?.stt}</Text>
-                        <Text>Họ và tên sinh viên: {dataRow?.ho_ten}</Text>
-                        <Text>Mã sinh viên: {dataRow?.ma_sv}</Text>
-                        <Text>Mã lớp: {dataRow?.ma_lop}</Text>
-                        <Text>Tên lớp: {dataRow?.ten_lop}</Text>
-                        <Text>Số điện thoại: {dataRow?.so_dien_thoai}</Text>
-                        <Text>
+                    <View
+                        style={{
+                            marginLeft: 16,
+                            marginTop: 20
+                        }}>
+                        <Text style={styles.textinfo}>
+                            Số thứ tự: {dataRow?.stt}
+                        </Text>
+                        <Text style={styles.textinfo}>
+                            Họ và tên sinh viên: {dataRow?.ho_ten}
+                        </Text>
+                        <Text style={styles.textinfo}>
+                            Mã sinh viên: {dataRow?.ma_sv}
+                        </Text>
+                        <Text style={styles.textinfo}>
+                            Mã lớp: {dataRow?.ma_lop}
+                        </Text>
+                        <Text style={styles.textinfo}>
+                            Tên lớp: {dataRow?.ten_lop}
+                        </Text>
+                        <Text style={styles.textinfo}>
+                            Số điện thoại: {dataRow?.so_dien_thoai}
+                        </Text>
+                        <Text style={styles.textinfo}>
                             Đã nghỉ số tiết :{' '}
                             <Text style={{ color: '#EE0033' }}>
                                 Chưa update !!
@@ -69,7 +85,7 @@ export const ModalInfoSV = (props) => {
                                 fontSize: 15,
                                 fontWeight: '700',
                                 color: '#FFFFFF',
-                                fontFamily: 'Open Sans'
+                                fontFamily: 'FS PF BeauSans Pro'
                             }}>
                             Đóng
                         </Text>

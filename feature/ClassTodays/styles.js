@@ -1,6 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+    viewWelcome: {
+        backgroundColor: '#66FF66',
+        height: 90,
+        width: 363,
+        marginLeft: 16,
+        borderRadius: 16,
+        marginTop: 10
+    },
     texttitle: {
         fontFamily: 'FS PF BeauSans Pro',
         marginTop: 20,
@@ -15,23 +23,27 @@ export const styles = StyleSheet.create({
         marginLeft: 16,
         fontSize: 16,
         fontWeight: '700',
-        textAlign: 'center'
+        textAlign: 'center',
+        marginLeft: 195,
+        marginTop: 16,
+        color: '#000000'
     },
     textchosedate: {
         fontFamily: 'FS PF BeauSans Pro',
-        marginLeft: 5,
+        marginLeft: 6,
         width: 100,
         fontSize: 16,
         fontWeight: '900',
         textAlign: 'center',
-        backgroundColor: 'orange',
-        borderRadius: 16
+        color: '#000000'
     },
     touchchosedate: {
         flexDirection: 'row',
-        width: 120,
+        width: 135,
         marginTop: 16,
-        marginLeft: 215
+        backgroundColor: '#FFFFFF',
+        borderRadius: 16,
+        marginLeft: 5
     },
     textthu: {
         fontFamily: 'FS PF BeauSans Pro',
@@ -117,12 +129,12 @@ export const styles = StyleSheet.create({
         color: '#FFFFFF'
     },
     touchviewds: {
-        width: 124,
+        width: 128,
         height: 48,
         backgroundColor: '#FFFFFF',
         marginLeft: 209,
         marginTop: -40,
-        borderRadius: 16,
+        borderRadius: 5,
         bottom: 10,
         flexDirection: 'row'
     },

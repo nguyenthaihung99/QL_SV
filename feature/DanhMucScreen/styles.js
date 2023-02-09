@@ -90,6 +90,7 @@ export const styles = StyleSheet.create({
     },
     viewdanhmuc: {
         backgroundColor: '#FFFFFF',
+        flexDirection: 'row',
         marginTop: 200,
         height: 200,
         width: 363,
@@ -112,6 +113,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'FS PF BeauSans Pro',
         marginTop: 5,
         marginLeft: -10,
+        color: '#000000',
         fontSize: 12,
         width: 80,
         textAlign: 'center',

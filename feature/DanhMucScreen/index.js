@@ -14,6 +14,7 @@ import {
 import { styles } from './styles';
 import { dataTinTuc } from './data';
 import { Info_GV } from '../../datafake/dataInfogv';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export const DanhMucScreen = ({ navigation }) => {
     let scrollValue = 0,
@@ -90,29 +91,22 @@ export const DanhMucScreen = ({ navigation }) => {
                 <TouchableOpacity
                     style={styles.viewtouchtkb}
                     onPress={() => navigation.navigate('Main')}>
-                    <Image
-                        style={styles.imagetkb}
-                        source={require('./icon/ic_qlsv_tkb.png')}
-                    />
+                    <Text style={{ marginLeft: 15, marginTop: 17 }}>
+                        <Icon name="calendar" size={35} color={'#000000'} />
+                    </Text>
                     <Text style={styles.texttkb}>Thời Khóa Biểu</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={{
                         width: 60,
-                        height: 90,
-                        marginTop: -93,
-                        marginLeft: 120
+                        height: 85,
+                        marginTop: 20,
+                        marginLeft: 30
                     }}
                     onPress={() => navigation.navigate('ClassTodays')}>
-                    <Image
-                        style={{
-                            width: 30,
-                            height: 37,
-                            marginLeft: 10,
-                            marginTop: 17
-                        }}
-                        source={require('../ClassTodays/icon/ic_qlsv_listsv.png')}
-                    />
+                    <Text style={{ marginLeft: 12, marginTop: 17 }}>
+                        <Icon name="list-ul" size={35} color={'#000000'} />
+                    </Text>
                     <Text style={styles.texttkb}>Quản Lý Sinh Viên</Text>
                 </TouchableOpacity>
             </View>

@@ -106,7 +106,7 @@ export const MainScreen = () => {
     return (
         <PaperProvider>
             <Fragment>
-                <TitleComponent title={'Quản Lý Thời Khóa Biểu Của GV'} />
+                <TitleComponent title={'Thời Khóa Biểu'} />
                 <Teachingschedule />
             </Fragment>
         </PaperProvider>

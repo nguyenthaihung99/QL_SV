@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
     },
 
     textbottom: {
-        marginTop: 30,
+        marginTop: 20,
         marginLeft: 40,
         color: 'red',
         width: 310,
@@ -63,16 +63,15 @@ export const styles = StyleSheet.create({
         color: '#000000',
         height: 40,
         marginTop: 5,
-        marginLeft: -20,
+        bottom: 20,
         textAlign: 'center',
         fontWeight: '700',
         fontFamily: 'FS PF BeauSans Pro'
     },
-
     touchdate: {
         marginTop: 10,
-        marginLeft: 230,
-        width: 150,
+        marginLeft: 250,
+        width: 130,
         height: 30,
         backgroundColor: '#FFFFFF',
         borderRadius: 16
@@ -81,7 +80,7 @@ export const styles = StyleSheet.create({
         color: '#000000',
         height: 90,
         marginTop: 5,
-        marginLeft: 20,
+        marginLeft: 15,
         fontWeight: '700',
         fontFamily: 'FS PF BeauSans Pro',
         textDecorationLine: 'underline'

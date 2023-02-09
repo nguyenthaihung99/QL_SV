@@ -3,8 +3,7 @@ const windowWidth = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
     viewmodalendclv: {
-        width: 346,
-        // height: 304,
+        width: 355,
         backgroundColor: 'rgba(255, 255, 255, 1)',
         borderRadius: 16
     },
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     viewcloses: {
         width: 200,
         height: 48,
-        marginLeft: 70,
+        marginLeft: 80,
         borderRadius: 4,
         justifyContent: 'center',
         alignContent: 'center',
@@ -41,6 +40,13 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '600',
         color: '#FFFFFF'
+    },
+    textinfo: {
+        paddingVertical: 5,
+        fontSize: 15,
+        fontWeight: '700',
+        color: 'black',
+        fontFamily: 'FS PF BeauSans Pro'
     }
 });
 

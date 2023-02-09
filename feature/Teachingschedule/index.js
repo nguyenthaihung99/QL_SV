@@ -16,16 +16,15 @@ import {
 } from 'recyclerlistview';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import moment from 'moment/moment';
+import Icon from 'react-native-vector-icons/AntDesign';
 
 import { styles } from './styles';
-import { dataThu } from './dataTKB';
 import { ModalTKB } from '../../extrafeatures/Modal/ModalshowTKB';
 
 export const Teachingschedule = () => {
     const [showmodalTKB, setShowmodalTKB] = useState(false);
     const [showmodaldate, setShowModalDate] = useState(false);
     const state = useSelector((state) => state.mainReducer.dataThu);
-    // console.log(state);
     const [startDate, setStartDate] = useState(
         moment(new Date()).format('DD/MM/YYYY')
     );
@@ -49,7 +48,8 @@ export const Teachingschedule = () => {
                     height: 80,
                     width: 363,
                     marginLeft: 16,
-                    borderRadius: 16
+                    borderRadius: 16,
+                    marginTop: 10
                 }}>
                 <Text style={styles.texttitle}>
                     Chào mừng bạn đến với danh mục quản lý thời khóa biểu của
@@ -62,13 +62,12 @@ export const Teachingschedule = () => {
         return (
             <View>
                 <TouchableOpacity
-                    style={styles.touchdate}
+                    style={[styles.touchdate, { flexDirection: 'row' }]}
                     onPress={() => setShowModalDate(true)}>
                     <Text style={styles.textdate}>{startDate}</Text>
-                    <Image
-                        style={styles.imagedate}
-                        source={require('./icon/ic_qlsv_tkb_date.png')}
-                    />
+                    <Text style={{ marginLeft: 10, marginTop: 5 }}>
+                        <Icon name="calendar" size={20} color={'#000000'} />
+                    </Text>
                 </TouchableOpacity>
             </View>
         );
@@ -188,28 +187,32 @@ export const Teachingschedule = () => {
     };
     const TitelBotton = () => {
         return (
-            <View style={{ marginTop: 20 }}>
+            <View>
                 <Text style={styles.textbottom}>
-                    Mọi thắc mắc liên hệ facebook chuyên ngành công nghệ phần
+                    Mọi thắc mắc liên hệ Facebook chuyên ngành công nghệ phần
                     mềm trường Đại Học Mỏ Địa Chất
                 </Text>
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'column' }}>
                     <TouchableOpacity
                         style={{
                             height: 30,
-                            marginTop: 30,
-                            bottom: 20,
-                            marginLeft: 190
+                            marginTop: 40,
+                            bottom: 10
                         }}
                         onPress={() => Linking.openURL(UrlFb)}>
                         <View style={{ flexDirection: 'column' }}>
-                            <Image
-                                style={styles.imagefb}
-                                source={require('./icon/ic_qlsv_Ts_fb.png')}
-                            />
-                            <Text style={styles.textfb}>FaceBook</Text>
+                            <Text style={{ textAlign: 'center', bottom: 10 }}>
+                                <Icon
+                                    name="facebook-square"
+                                    size={30}
+                                    color={'#006699'}
+                                />
+                            </Text>
                         </View>
                     </TouchableOpacity>
+                    <Text style={styles.textfb}>
+                        HUMG Information Technology
+                    </Text>
                 </View>
             </View>
         );
@@ -222,7 +225,7 @@ export const Teachingschedule = () => {
                         width: 363,
                         height: 2445,
                         position: 'absolute',
-                        marginTop: 131.5,
+                        marginTop: 141.5,
                         marginLeft: 16
                     }}
                     blurRadius={5}

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import moment from 'moment/moment';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import { styles } from './styles';
 import { Info_GV } from '../../datafake/dataInfogv';
@@ -35,14 +36,7 @@ export const ClassTodays = ({ navigation }) => {
     };
     const TitleWellCome = () => {
         return (
-            <View
-                style={{
-                    backgroundColor: '#66FF66',
-                    height: 90,
-                    width: 363,
-                    marginLeft: 16,
-                    borderRadius: 16
-                }}>
+            <View style={styles.viewWelcome}>
                 <Text style={styles.texttitle}>
                     Chào mừng giảng viên {ho_ten} đến với danh mục quản lý thời
                     khóa biểu theo ngày
@@ -52,7 +46,7 @@ export const ClassTodays = ({ navigation }) => {
     };
     const DateChose = () => {
         return (
-            <View>
+            <View style={{ flexDirection: 'row' }}>
                 <DateTimePicker
                     isVisible={showmodaldate}
                     mode="date"
@@ -60,14 +54,16 @@ export const ClassTodays = ({ navigation }) => {
                     onCancel={hideDateTKB}
                     display="spinner"
                 />
-                <View>
-                    <TouchableOpacity
-                        style={styles.touchchosedate}
-                        onPress={() => onPressModalDate()}>
-                        <Text style={styles.textdate}>Ngày:</Text>
-                        <Text style={styles.textchosedate}>{startDate}</Text>
-                    </TouchableOpacity>
-                </View>
+                <Text style={styles.textdate}>Ngày:</Text>
+                <TouchableOpacity
+                    style={styles.touchchosedate}
+                    onPress={() => onPressModalDate()}>
+                    <Text style={styles.textchosedate}>{startDate}</Text>
+                    <Text style={{ marginTop: 3 }}>
+                        <Icon name="calendar-alt" size={15} color={'#000000'} />
+                    </Text>
+                </TouchableOpacity>
+                {/* </View> */}
             </View>
         );
     };
@@ -163,19 +159,27 @@ export const ClassTodays = ({ navigation }) => {
                                                         Phòng học:{' '}
                                                         {value.phong_hoc}
                                                     </Text>
-                                                    <View
+                                                    <TouchableOpacity
+                                                        onPress={() =>
+                                                            onPressShowListStudent(
+                                                                value,
+                                                                item
+                                                            )
+                                                        }
                                                         style={
                                                             styles.touchviewds
                                                         }>
-                                                        <Image
+                                                        <Text
                                                             style={{
-                                                                width: 23.5,
-                                                                height: 29,
-                                                                marginTop: 9,
-                                                                marginLeft: 5
-                                                            }}
-                                                            source={require('./icon/ic_qlsv_listsv.png')}
-                                                        />
+                                                                marginLeft: 4,
+                                                                marginTop: 8
+                                                            }}>
+                                                            <Icon
+                                                                name="list-ul"
+                                                                size={30}
+                                                                color={'black'}
+                                                            />
+                                                        </Text>
                                                         <View
                                                             style={{
                                                                 width: 1,
@@ -186,22 +190,14 @@ export const ClassTodays = ({ navigation }) => {
                                                                 marginTop: 5
                                                             }}
                                                         />
-                                                        <TouchableOpacity
-                                                            onPress={() =>
-                                                                onPressShowListStudent(
-                                                                    value,
-                                                                    item
-                                                                )
+
+                                                        <Text
+                                                            style={
+                                                                styles.textds
                                                             }>
-                                                            <Text
-                                                                style={
-                                                                    styles.textds
-                                                                }>
-                                                                Danh Sách Sinh
-                                                                Viên
-                                                            </Text>
-                                                        </TouchableOpacity>
-                                                    </View>
+                                                            Danh Sách Sinh Viên
+                                                        </Text>
+                                                    </TouchableOpacity>
                                                     <View
                                                         style={{
                                                             width: 303,
@@ -258,19 +254,27 @@ export const ClassTodays = ({ navigation }) => {
                                                         Phòng học:{' '}
                                                         {value.phong_hoc}
                                                     </Text>
-                                                    <View
+                                                    <TouchableOpacity
+                                                        onPress={() =>
+                                                            onPressShowListStudent(
+                                                                value,
+                                                                item
+                                                            )
+                                                        }
                                                         style={
                                                             styles.touchviewds
                                                         }>
-                                                        <Image
+                                                        <Text
                                                             style={{
-                                                                width: 23.5,
-                                                                height: 29,
-                                                                marginTop: 9,
-                                                                marginLeft: 5
-                                                            }}
-                                                            source={require('./icon/ic_qlsv_listsv.png')}
-                                                        />
+                                                                marginLeft: 4,
+                                                                marginTop: 8
+                                                            }}>
+                                                            <Icon
+                                                                name="list-ul"
+                                                                size={30}
+                                                                color={'black'}
+                                                            />
+                                                        </Text>
                                                         <View
                                                             style={{
                                                                 width: 1,
@@ -281,22 +285,14 @@ export const ClassTodays = ({ navigation }) => {
                                                                 marginTop: 5
                                                             }}
                                                         />
-                                                        <TouchableOpacity
-                                                            onPress={() =>
-                                                                onPressShowListStudent(
-                                                                    value,
-                                                                    item
-                                                                )
+
+                                                        <Text
+                                                            style={
+                                                                styles.textds
                                                             }>
-                                                            <Text
-                                                                style={
-                                                                    styles.textds
-                                                                }>
-                                                                Danh Sách Sinh
-                                                                Viên
-                                                            </Text>
-                                                        </TouchableOpacity>
-                                                    </View>
+                                                            Danh Sách Sinh Viên
+                                                        </Text>
+                                                    </TouchableOpacity>
                                                     <View
                                                         style={{
                                                             width: 303,
@@ -355,7 +351,7 @@ export const ClassTodays = ({ navigation }) => {
     };
     return (
         <View style={{ flex: 1 }}>
-            <TitleComponent title={'Quản Lý Danh Sách Sinh Viên Theo Lớp'} />
+            <TitleComponent title={'Quản Lý Sinh Viên'} />
             <ScrollView
                 style={{ flex: 1 }}
                 showsVerticalScrollIndicator={false}>

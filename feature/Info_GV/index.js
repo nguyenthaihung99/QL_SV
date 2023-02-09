@@ -146,10 +146,7 @@ export default function Info_GV({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <ScrollView style={{ flex: 1 }}>
-                <ImageBackground
-                    style={{ width: '100%', height: 1050 }}
-                    // source={require('./icon/ic_qlsv_bginfogv.png')}
-                />
+                <ImageBackground style={{ width: '100%', height: 1050 }} />
                 <TitleAvtName />
                 <InfoGeneral />
             </ScrollView>

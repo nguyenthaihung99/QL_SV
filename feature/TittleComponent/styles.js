@@ -61,13 +61,12 @@ export const styles = StyleSheet.create({
     },
     viewtitel: {
         backgroundColor: '#FFFFFF',
-        height: 100,
         width: '100%'
     },
     imagelogo: {
-        width: 69,
-        height: 90,
-        marginLeft: 10
+        width: 49,
+        height: 60,
+        marginLeft: 20
     },
     textnameapp: {
         fontSize: 33,
@@ -94,21 +93,17 @@ export const styles = StyleSheet.create({
     textqlsv: {
         fontFamily: 'FS PF BeauSans Pro',
         textAlign: 'center',
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: '900',
         color: '#FFFFFF',
-        width: 240
+        width: 240,
+        marginTop: 15
     },
     viewtitels: {
-        width: 260,
-        display: 'flex',
         height: 50,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: 'red',
         borderBottomLeftRadius: 16,
         borderBottomRightRadius: 16,
-        marginLeft: 70,
         bottom: 10,
         marginTop: 10
     }

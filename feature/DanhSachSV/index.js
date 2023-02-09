@@ -54,6 +54,9 @@ export const DanhSachSinhVien = (props) => {
                     Mã Môn Học: {datainfoclass.ma_mh}
                 </Text>
                 <Text style={styles.textmamh}>
+                    Số tín chỉ: {datainfoclass.so_tin_chi}
+                </Text>
+                <Text style={styles.textmamh}>
                     Tiết Bắt Đầu: {datainfoclass.tiet_bd}
                 </Text>
                 <Text style={styles.textmamh}>
@@ -106,30 +109,29 @@ export const DanhSachSinhVien = (props) => {
             };
             const onPressShowInfo = (dataRow) => {
                 setShowModalInfoSV(true);
-                // setTimeout(() => {
                 setDataSelect(dataRow);
-                // }, 1000);
             };
             return (
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity
                         style={{
                             marginLeft: 10,
-                            width: 36,
-                            height: 36,
+                            width: 40,
+                            height: 40,
                             borderRadius: 4,
                             backgroundColor:
-                                check === true ? 'green' : '#FFFFFF'
+                                check === true ? '#008000' : '#FFFFFF',
+                            marginTop: -2
                         }}
                         onPress={() =>
                             onPressCLickMember(dataRow, index, check)
                         }>
                         {check === true ? (
-                            <Text style={{ marginLeft: 4, marginTop: 4 }}>
+                            <Text style={{ marginLeft: 5, marginTop: 4 }}>
                                 <Icon
                                     name="check"
                                     size={30}
-                                    color={check === true ? '#66FF66' : 'black'}
+                                    color={'#66FF66'}
                                 />
                             </Text>
                         ) : null}
@@ -144,12 +146,8 @@ export const DanhSachSinhVien = (props) => {
                             }
                         ]}
                         onPress={() => onPressShowInfo(dataRow)}>
-                        <Text style={{ marginLeft: 6, marginTop: 4.5 }}>
-                            <Icon
-                                name="address-book"
-                                size={30}
-                                color={'black'}
-                            />
+                        <Text style={{ marginLeft: 5, marginTop: 4.5 }}>
+                            <Icon name="user-alt" size={30} color={'#E9967A'} />
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -158,8 +156,8 @@ export const DanhSachSinhVien = (props) => {
                             { borderRadius: 4, backgroundColor: '#FFFFFF' }
                         ]}
                         onPress={() => onPressDelete(dataRow.stt, dataRow)}>
-                        <Text style={{ marginLeft: 5, marginTop: 4.5 }}>
-                            <Icon name="archive" size={30} color={'black'} />
+                        <Text style={{ marginLeft: 6, marginTop: 4.5 }}>
+                            <Icon name="trash" size={30} color={'#EE0033'} />
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -340,7 +338,7 @@ export const DanhSachSinhVien = (props) => {
     };
     return (
         <View style={{ flex: 1 }}>
-            <TitleComponent title={'Quản Lý Sinh Viên Theo Lớp'} />
+            <TitleComponent title={'Danh Sách Sinh Viên'} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <BackGround />
                 <InfoClass />

@@ -3,11 +3,12 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     viewinfoclass: {
         width: 363,
-        height: 180,
+        height: 200,
         backgroundColor: 'skyblue',
         borderRadius: 16,
         marginLeft: 16,
-        position: 'absolute'
+        position: 'absolute',
+        marginTop: 10
     },
     viewlistsv: {
         width: 363,
@@ -94,7 +95,7 @@ export const styles = StyleSheet.create({
         color: 'black'
     },
     viewtable: {
-        marginTop: 200,
+        marginTop: 230,
         marginLeft: 16,
         marginRight: 16,
         bottom: 10
