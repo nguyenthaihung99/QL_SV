@@ -12,11 +12,14 @@ import {
 import { useSelector } from 'react-redux';
 import { Cell, Row, Table, TableWrapper } from 'react-native-table-component';
 import { utils, write } from 'xlsx';
+import Modal from 'react-native-modal';
 import { DownloadDirectoryPath, writeFile } from 'react-native-fs';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import { TitleComponent } from '../TittleComponent';
 import { styles } from './styles';
 import { ModalAddStudent } from '../../extrafeatures/Modal/Modaladdstudent';
+import { ModalInfoSV } from '../../extrafeatures/Modal/ModalInfo';
 
 export const DanhSachSinhVien = (props) => {
     const state = useSelector((state) => state?.mainReducer?.DsSinhVien);
@@ -35,6 +38,12 @@ export const DanhSachSinhVien = (props) => {
         setDssinhvien(state);
     }, []);
     const [showmodaladdstudent, setShowmodaladdstudent] = useState(false);
+    const [showModalInfoSV, setShowModalInfoSV] = useState(false);
+    const [dataSelect, setDataSelect] = useState();
+    const closeModalInfoSV = () => {
+        setShowModalInfoSV(!showModalInfoSV);
+        setDataSelect('');
+    };
     const InfoClass = () => {
         return (
             <View style={styles.viewinfoclass}>
@@ -69,7 +78,7 @@ export const DanhSachSinhVien = (props) => {
             'Tên Lớp',
             'SĐT'
         ];
-        const widthArray = [130, 40, 100, 160, 80, 200, 90];
+        const widthArray = [150, 40, 100, 160, 80, 200, 90];
 
         const TouchClick = (dataRow, index, check) => {
             const onPressCLickMember = (dataRow, index) => {
@@ -95,27 +104,63 @@ export const DanhSachSinhVien = (props) => {
                     }
                 ]);
             };
+            const onPressShowInfo = (dataRow) => {
+                setShowModalInfoSV(true);
+                // setTimeout(() => {
+                setDataSelect(dataRow);
+                // }, 1000);
+            };
             return (
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity
                         style={{
-                            marginLeft: 22,
+                            marginLeft: 10,
                             width: 36,
                             height: 36,
-                            borderRadius: 20,
-                            backgroundColor: check === true ? 'green' : 'red'
+                            borderRadius: 4,
+                            backgroundColor:
+                                check === true ? 'green' : '#FFFFFF'
                         }}
                         onPress={() =>
                             onPressCLickMember(dataRow, index, check)
-                        }
-                    />
+                        }>
+                        {check === true ? (
+                            <Text style={{ marginLeft: 4, marginTop: 4 }}>
+                                <Icon
+                                    name="check"
+                                    size={30}
+                                    color={check === true ? '#66FF66' : 'black'}
+                                />
+                            </Text>
+                        ) : null}
+                    </TouchableOpacity>
                     <TouchableOpacity
-                        style={styles.tochClickDetete}
+                        style={[
+                            styles.tochClickDetete,
+                            {
+                                marginLeft: 5,
+                                backgroundColor: '#FFFFFF',
+                                borderRadius: 4
+                            }
+                        ]}
+                        onPress={() => onPressShowInfo(dataRow)}>
+                        <Text style={{ marginLeft: 6, marginTop: 4.5 }}>
+                            <Icon
+                                name="address-book"
+                                size={30}
+                                color={'black'}
+                            />
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={[
+                            styles.tochClickDetete,
+                            { borderRadius: 4, backgroundColor: '#FFFFFF' }
+                        ]}
                         onPress={() => onPressDelete(dataRow.stt, dataRow)}>
-                        <Image
-                            style={styles.imagedelele}
-                            source={require('./icon/ic_qlsv_delete.png')}
-                        />
+                        <Text style={{ marginLeft: 5, marginTop: 4.5 }}>
+                            <Icon name="archive" size={30} color={'black'} />
+                        </Text>
                     </TouchableOpacity>
                 </View>
             );
@@ -308,6 +353,12 @@ export const DanhSachSinhVien = (props) => {
                     datastudent={datastudent}
                     setDatastudent={setDatastudent}
                     dssinhvien={dssinhvien}
+                />
+                <ModalInfoSV
+                    showModalInfoSV={showModalInfoSV}
+                    setShowModalInfoSV={setShowModalInfoSV}
+                    closeModal={closeModalInfoSV}
+                    dataRow={dataSelect}
                 />
             </ScrollView>
         </View>

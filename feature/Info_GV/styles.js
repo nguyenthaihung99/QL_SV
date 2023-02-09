@@ -20,10 +20,8 @@ export const styles = StyleSheet.create({
         position: 'absolute'
     },
     imageback: {
-        width: 40,
-        height: 40,
-        marginLeft: 6,
-        marginTop: 6
+        width: 50,
+        height: 50
     },
     viewavt: {
         width: '100%',
